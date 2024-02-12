@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="EventNow.Site1" %>
+<!DOCTYPE html>
+
+<html>
+    <head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <br />
+            <table class="auto-style2">
+                <tr>
+                    <td>
+            <div class="title">
+                <h1>
+                    EventNow
+                </h1>
+            </div>                               
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>         
+                        &nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+            <br />
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Login"/>
+                        <asp:MenuItem NavigateUrl="~/SignUpEventView.aspx" Text="SignUpList"/>
+                        <asp:MenuItem NavigateUrl="~/EventCreation.aspx" Text="Create Event" Value="Products"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/EventDetail.aspx" Text="Event Detail"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+</form>
+</body>
+</html>
